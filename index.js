@@ -2,8 +2,8 @@ var creatCSVFile = require('./dist/creatCSVFile');
 var downloadFile = require('./dist/downloadFile');
 var detectionClientType = require('./dist/detectionClientType');
 
-function downloadCsv(datas, columns, filename) {
-  downloadFile(creatCSVFile(datas, columns), filename);
+function downloadCsv(datas, columns, filename, separator = ',') {
+  downloadFile(creatCSVFile(datas, columns, separator), filename);
 };
 
 downloadCsv.creatCsvFile = creatCSVFile;
