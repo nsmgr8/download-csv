@@ -1,13 +1,13 @@
-var creatCSVFile = require('./dist/creatCSVFile');
-var downloadFile = require('./dist/downloadFile');
-var detectionClientType = require('./dist/detectionClientType');
+import creatCSVFile from './dist/creatCSVFile';
+import downloadFile from './dist/downloadFile';
+import detectionClientType from './dist/detectionClientType';
 
 function downloadCsv(datas, columns, filename, separator = ',') {
   downloadFile(creatCSVFile(datas, columns, separator), filename);
-};
+}
 
 downloadCsv.creatCsvFile = creatCSVFile;
 downloadCsv.downloadFile = downloadFile;
 downloadCsv.detectionClientType = detectionClientType;
 
-module.exports = downloadCsv;
+export default downloadCsv;
